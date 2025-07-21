@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: nuxt-output
-          path: dist
+          path: .output/public
 
   # test:
   #   runs-on: ubuntu-latest
@@ -76,9 +76,6 @@ jobs:
       - name: Build Nuxt 3 app
         run: npm run generate
         # Ensure the build command is correct for Nuxt 3.
-      - name: Upload build output
-        uses: actions/upload-artifact@v4
-        
       - name: Inspect build output
         run: ls -la .output/public
         # Ensure the correct output directory is inspected.
