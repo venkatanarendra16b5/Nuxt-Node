@@ -66,8 +66,8 @@ jobs:
         run: npm install
 
       - name: Inspect build output
-        run: ls -la dist
-        # This step lists the contents of the dist directory to verify the build output before deployment.
+        run: ls -la .output/public
+        # Updated to inspect the correct output directory for Nuxt static files.
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
