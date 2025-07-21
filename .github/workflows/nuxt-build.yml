@@ -73,4 +73,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: .output/public
+          # Updated the publish_dir to match Nuxt's default static output directory.
