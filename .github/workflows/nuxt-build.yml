@@ -65,6 +65,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Inspect build output
+        run: ls -la dist
+        # This step lists the contents of the dist directory to verify the build output before deployment.
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
