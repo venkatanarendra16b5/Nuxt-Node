@@ -73,13 +73,15 @@ jobs:
           ls -la
         # Added a step to debug the environment and confirm the directory structure.
 
+      - name: Build Nuxt 3 app
+        run: npm run generate
+        # Ensure the build command is correct for Nuxt 3.
+      - name: Upload build output
+        uses: actions/upload-artifact@v4
+        
       - name: Inspect build output
         run: ls -la .output/public
         # Ensure the correct output directory is inspected.
-
-      - name: Debug Nuxt generate
-        run: npm run generate --verbose
-        # Added a step to log the output of the `npm run generate` command for debugging.
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
