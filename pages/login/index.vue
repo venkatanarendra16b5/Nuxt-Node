@@ -1,7 +1,7 @@
 <template>
     <div class="login-container">
       <div class="branding">
-        <h1>HOSTEL MANAGEMENT</h1>
+        <h1>Hyderabad HOSTEL MANAGEMENT</h1>
       </div>
       <div class="login-box">
         <h2>Login</h2>
